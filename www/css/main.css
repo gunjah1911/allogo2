@@ -1,0 +1,198 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ad9a7a;
+  color: #fff;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: url(../img/title-pic.jpg) no-repeat center;
+  position: relative;
+  min-height: 633px;
+}
+
+.header-overlay {
+  position: absolute;
+  opacity: .74;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #957e53;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.header-overlay:hover {
+  opacity: 0;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ad9a7a;
+  height: 6vh;
+  z-index: 1;
+}
+
+nav {
+  width: 40%;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+  font-family: "Roboto Condensed";
+  font-style: uppercase;
+}
+
+.menu__nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 10%;
+}
+
+.social__social-icon {
+  font-size: 1.3rem;
+}
+
+.social__social-icon a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social__social-icon a:visited {
+  color: #fff;
+}
+
+.social__social-icon .fa-vk:hover {
+  color: #507299;
+}
+
+.social__social-icon .fa-instagram:hover {
+  color: #507299;
+  background: -webkit-linear-gradient(247deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  background: -o-linear-gradient(247deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  background: linear-gradient(203deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+
+.social__social-icon .fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.title-stripe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  height: 20vh;
+}
+
+.text-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.header-big {
+  display: block;
+  font: bold 3rem "Cuprum";
+  opacity: 1;
+}
+
+.header-md {
+  display: block;
+  font: 2rem "Cuprum";
+}
+
+.header-sm {
+  display: block;
+  font: 1.5rem "Cuprum";
+}
+
+.section__header {
+  width: 80%;
+  font: 2rem "Cuprum";
+  text-align: center;
+  overflow: hidden;
+}
+
+.section__header:before, .section__header:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+
+.section__header:before {
+  margin-left: -100%;
+  left: -20px;
+}
+
+.section__header:after {
+  margin-right: -100%;
+  right: -20px;
+}

@@ -1,0 +1,166 @@
+$MenuFont: 'Roboto Condensed'
+$HeaderFont: 'Cuprum'
+$MainFont: 'Roboto Condensed'
+$MainTextColor: #fff
+$MainBgdColor: #ad9a7a
+
+*, *:before, *:after
+	box-sizing: border-box
+
+body 
+	margin: 0
+	background-color: $MainBgdColor
+	color: $MainTextColor
+
+.wrapper
+	width: 60% //@media 100%
+	margin: 0 auto
+
+header
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	background: url(../img/title-pic.jpg) no-repeat center
+	position: relative
+	min-height: 633px
+	//background-size: cover
+	//height: 100vh
+	//height: 633px
+
+//затемнение картинки
+.header-overlay
+	position: absolute
+	opacity: .74
+	z-index: 0
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: #957e53
+	transition: 0.8s
+
+	&:hover
+		opacity: 0
+
+.menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: $MainBgdColor
+	height: 6vh
+	//opacity: 0
+	z-index: 1
+	
+.menu__logo
+	//background-image: url(img/logo.png) no-repeat center
+	//border: 1px solid red
+	//width: 20%
+
+nav 
+	width: 40%
+
+
+nav ul
+	display: flex
+	justify-content: space-around
+	align-items: center
+	
+	//padding: 0 10% 0  0
+	padding: 0
+	list-style: none
+	font-family: $MenuFont
+	font-style: uppercase
+
+.menu__nav-link
+	text-decoration: none
+	color: $MainTextColor
+
+.menu__social
+	display: flex
+	justify-content: space-around
+	align-items: center
+
+	width: 10%
+
+.social__social-icon //i.fa
+	display:block
+	font-size: 1.3rem
+	//color: $MainTextColor
+
+.social__social-icon a
+	//border: 1px solid red
+	display: block
+	color: $MainTextColor
+	//width: 25
+	//height: 15
+	//background: url('../img/vk-mono.png') no-repeat //center
+	//overflow: hidden
+	text-decoration: none
+	&:visited
+		color: $MainTextColor
+
+.social__social-icon .fa-vk:hover
+	color: #507299
+
+.social__social-icon .fa-instagram:hover
+	color: #507299
+	background: linear-gradient(203deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
+
+.social__social-icon .fa-whatsapp:hover
+	color: #25d366
+
+.title-stripe
+	display: flex
+	justify-content: space-around
+	align-items: center
+	background: rgba(0, 0, 0, .5)
+	//opacity: .5
+	z-index: 1
+	height: 20vh
+
+.text-side
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+
+.header-big
+	display: block
+	font: bold 3rem $HeaderFont
+	opacity: 1
+
+.header-md
+	display: block
+	font: 2rem $HeaderFont
+
+.header-sm
+	display: block
+	font: 1.5rem $HeaderFont
+
+//.btn-consult
+
+.section__header 						//Заголовок с полосами по краям
+	//display: flex
+	//justify-content: space-around
+	width: 80%
+	//margin 0 auto
+	font: 2rem $HeaderFont
+	text-align: center
+	overflow: hidden
+	&:before, &:after 
+  		content: ''
+  		display: inline-block
+  		vertical-align: middle
+  		width: 100%
+  		height: 2px
+  		background: $MainTextColor
+  		position: relative
+	&:before 
+		margin-left: -100%
+		left: -20px
+	&:after 
+		margin-right: -100%
+		right: -20px				//Конец
+
+
+//testdfgs	
+  //<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
