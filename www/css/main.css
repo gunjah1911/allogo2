@@ -118,7 +118,8 @@ nav ul {
 }
 
 .social__social-icon .fa-instagram:hover {
-  color: #507299;
+  border-radius: 5px;
+  color: white;
   background: -webkit-linear-gradient(247deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   background: -o-linear-gradient(247deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
   background: linear-gradient(203deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
@@ -170,8 +171,54 @@ nav ul {
   font: 1.5rem "Cuprum";
 }
 
+a.btn-consult {
+  color: black;
+  font: 1.2rem "Roboto Condensed";
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.5em 2em;
+  outline: none;
+  border: 2px 0 solid none #FDBE33 #000 #D77206;
+  border-radius: 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3d20f), to(#e3a716)) #E38916;
+  background: -webkit-linear-gradient(#f3d20f, #e3a716) #E38916;
+  background: -o-linear-gradient(#f3d20f, #e3a716) #E38916;
+  background: linear-gradient(#f3d20f, #e3a716) #E38916;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+a.btn-consult:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5ae00), to(#f5ad00)) #f5ae00;
+  background: -webkit-linear-gradient(#f5ae00, #f5ad00) #f5ae00;
+  background: -o-linear-gradient(#f5ae00, #f5ad00) #f5ae00;
+  background: linear-gradient(#f5ae00, #f5ad00) #f5ae00;
+}
+
+a.btn-consult:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f59500), to(#f5ae00)) #f59500;
+  background: -webkit-linear-gradient(#f59500, #f5ae00) #f59500;
+  background: -o-linear-gradient(#f59500, #f5ae00) #f59500;
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+section.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .section__header {
   width: 80%;
+  padding: 0.8em;
   font: 2rem "Cuprum";
   text-align: center;
   overflow: hidden;
@@ -195,4 +242,50 @@ nav ul {
 .section__header:after {
   margin-right: -100%;
   right: -20px;
+}
+
+.section__header--black {
+  color: black;
+}
+
+.section__header--black:before {
+  background: black;
+}
+
+.section__header--black:after {
+  background: black;
+}
+
+.services__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.services__item {
+  width: 20%;
+  color: black;
+  font: "Roboto Condensed";
+  padding: 1.5em 2em;
+  border-radius: 8px;
+  background: white;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.services__item__header {
+  padding: 0.5em;
+  display: block;
+  text-align: center;
+  color: black;
+  font: bold 1.2em "Cuprum";
+}
+
+.services__item__body {
+  display: block;
+  text-align: center;
+  color: black;
+  font: 1em "Roboto Condensed";
 }
