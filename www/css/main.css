@@ -262,6 +262,7 @@ section.services {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
+  padding-bottom: 10%;
 }
 
 .services__item {
@@ -288,4 +289,9 @@ section.services {
   text-align: center;
   color: black;
   font: 1em "Roboto Condensed";
+}
+
+.about {
+  background: url("../img/about-bg.jpg") no-repeat center;
+  min-height: 1295px;
 }
