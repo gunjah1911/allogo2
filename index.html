@@ -4,11 +4,24 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Roboto+Condensed&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+	
+<script type="text/javascript">
+ $(document).ready(function(){
+    $("nav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+});
+</script>
+
 	<div class="wrapper">
 <!-- Титульная часть с меню и картинкой -->			
 		<header>
@@ -16,7 +29,7 @@
 			<div class="menu">
 				<div class="menu__logo"><img src="img/logo.png" alt="Лого"></div>
 				<nav><ul>
-					<li><a class="menu__nav-link" href="#">ОБО МНЕ</a></li>
+					<li><a class="menu__nav-link" href="#about">ОБО МНЕ</a></li>
 					<li><a class="menu__nav-link" href="#">КОНТАКТЫ</a></li>
 					<li><a class="menu__nav-link" href="#">БЛОГ</a></li>
 				</ul></nav>
@@ -52,12 +65,13 @@
 			</div>
 		</section>
 	</div> <!-- Wrapper 60% -->
+
 			<!-- ABOUT -->
-		<section class="about">
-			<div class="wrapper">
-				<div class="section__header section__header--black">Обо мне</div>	
-			</div>	<!-- Wrapper 60% -->
+	<div class="wrapper-bg">
+		<section id="about">
+			<div class="section__header section__header--black">Обо мне</div>
 		</section>
+	</div>	 <!-- Wrapper -->
 
 </body>
 </html>
