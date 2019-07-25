@@ -91,6 +91,7 @@ nav ul {
   width: 10%; }
 
 .social__social-icon {
+  display: block;
   font-size: 1.3rem; }
 
 .social__social-icon a {
@@ -289,4 +290,64 @@ a.btn-consult:active {
   width: 40%;
   -ms-flex-item-align: end;
   align-self: flex-end;
+<<<<<<< Updated upstream
   font-family: "Roboto Condensed"; }
+=======
+  padding: 1em 0;
+  min-height: 1295px; }
+
+.about-article {
+  padding-right: 35%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  font: 1.5em "Roboto Condensed"; }
+
+#needhelp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: white;
+  color: black; }
+
+.section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: black;
+  padding: 0 0 3rem 0; }
+
+.needhelp-item {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+  border: 1px solid red;
+  font: 1.5em "Roboto Condensed";
+  text-align: center;
+  color: black; }
+
+.fa-check-square-o {
+  display: inline-block;
+  font-size: 3em;
+  color: #3c3; }
+
+.center {
+  display: inline-block;
+  border: 1px solid red; }
+
+.fa-li {
+  font-size: 2em;
+  display: block; }
+>>>>>>> Stashed changes
