@@ -225,10 +225,13 @@ a.btn-consult:active {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  padding-bottom: 10%; }
+  padding-bottom: 4em;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 .services__item {
-  width: 25%;
+  -ms-flex-preferred-size: 23%;
+  flex-basis: 23%;
   color: black;
   font: "Roboto Condensed";
   padding: 1.5em 2em;
