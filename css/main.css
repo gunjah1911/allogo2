@@ -11,7 +11,7 @@ body {
   width: 60%;
   margin: 0 auto; }
 
-header {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,6 +213,7 @@ a.btn-consult:active {
     right: -30px; }
 
 .section__header--black {
+  width: 50%;
   color: black; }
   .section__header--black:before {
     background: black; }
@@ -253,7 +254,7 @@ a.btn-consult:active {
   color: black;
   font: 1.2em "Roboto Condensed"; }
 
-.wrapper-bg {
+#about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,8 +269,9 @@ a.btn-consult:active {
   background-size: cover;
   min-height: 1295px; }
 
-#about {
-  width: 60%;
+.wrapper-right {
+  width: 65%;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,16 +279,21 @@ a.btn-consult:active {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 1em 0; }
-
-.about_1 {
-  width: 40%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  font-family: "Roboto Condensed"; }
+  padding: 1em 0;
+  min-height: 1295px; }
+
+.about-1 {
+  padding-right: 35%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  font: 1.5em "Roboto Condensed"; }
+
+.article-header {
+  font: 1.5em "Cuprum"; }
