@@ -153,7 +153,7 @@ nav ul {
 
 a.btn-consult {
   color: black;
-  font: bold 1.2rem "Roboto Condensed";
+  font: 1.2rem "Roboto Condensed";
   text-decoration: none;
   cursor: pointer;
   padding: 1.5em 2em;
@@ -247,13 +247,13 @@ a.btn-consult:active {
   display: block;
   text-align: center;
   color: black;
-  font: bold 1.5rem "Cuprum"; }
+  font: bold 1.5em "Cuprum"; }
 
 .services__item__body {
   display: block;
   text-align: center;
   color: black;
-  font: 1.2rem "Roboto Condensed"; }
+  font: 1.2em "Roboto Condensed"; }
 
 #about {
   display: -webkit-box;
@@ -289,13 +289,12 @@ a.btn-consult:active {
   min-height: 1295px; }
 
 .about-article {
-  padding: 3em 35% 3em 2em;
+  padding-right: 35%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5)));
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  font: 1.5em "Roboto Condensed";
-  line-height: 150%; }
+  font: 1.5em "Roboto Condensed"; }
 
 #needhelp {
   display: -webkit-box;
@@ -312,7 +311,6 @@ a.btn-consult:active {
   color: black; }
 
 .section-wrapper {
-  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,24 +318,27 @@ a.btn-consult:active {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  flex-wrap: wrap;
   color: black;
-  padding: 0 0 3em 0; }
+  padding: 0 0 3rem 0; }
 
 .needhelp-item {
   -ms-flex-preferred-size: 40%;
   flex-basis: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font: 1.5rem "Roboto Condensed";
+  border: 1px solid red;
+  font: 1.5em "Roboto Condensed";
   text-align: center;
   color: black; }
 
 .fa-check-square-o {
   display: inline-block;
-  font-size: 4rem;
-  color: #3c3;
-  padding: 1rem; }
+  font-size: 3em;
+  color: #3c3; }
+
+.center {
+  display: inline-block;
+  border: 1px solid red; }
+
+.fa-li {
+  font-size: 2em;
+  display: block; }
