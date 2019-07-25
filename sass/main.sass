@@ -16,7 +16,7 @@ body
 	width: 60% //@media 100%
 	margin: 0 auto
 
-header
+.header
 	display: flex
 	flex-direction: column
 	justify-content: space-between
@@ -185,6 +185,7 @@ a.btn-consult:active
 		right: -30px				//Конец
 
 .section__header--black
+	width: 50%
 	color: black
 	//width: 100%
 	&:before
@@ -225,13 +226,8 @@ a.btn-consult:active
 	color: black
 	font: 1.2em $MainFont
 
-<<<<<<< Updated upstream
-.wrapper-bg
-	//центрирование поисходит, только если строчки про флекс находятся в начале
-=======
 #about
 	//центрирование содержимого происходит, только если строчки про флекс находятся в начале
->>>>>>> Stashed changes
 	display: flex
 	flex-direction: column
 	align-items: center
@@ -239,21 +235,14 @@ a.btn-consult:active
 	background-size: cover
 	min-height: 1295px
 
-#about
-	width: 60%
+.wrapper-right 
+	width: 65%
+	height: 70vh
 	display: flex
 	flex-direction: column
-	justify-content: center
-	align-items: center
+	justify-content: space-between
+	align-self: flex-end  //@media align-self:auto
 	padding: 1em 0
-<<<<<<< Updated upstream
-
-.about_1
-	//flex-basis: 20%
-	width: 40%
-	align-self: flex-end 
-	font-family: $MainFont
-=======
 	min-height: 1295px
 
 .about-article
@@ -302,4 +291,3 @@ a.btn-consult:active
 	display: block
 
 
->>>>>>> Stashed changes
