@@ -101,7 +101,7 @@ nav ul
 		color: $MainTextColor
 
 .social__social-icon .fa-vk:hover
-	color: #507299
+	color: #4680C2
 
 .social__social-icon .fa-instagram:hover
 	border-radius: 5px
@@ -109,7 +109,7 @@ nav ul
 	background: linear-gradient(203deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
 
 .social__social-icon .fa-whatsapp:hover
-	color: #25d366
+	color: #25D366
 
 .title-stripe
 	display: flex
@@ -279,9 +279,15 @@ a.btn-consult:active
 	text-align: center
 	color: black
 
-.fa-check-square-o
+.fa-check-square-o //not used
 	display: inline-block
 	font-size: 4rem
+	color: #3c3
+	padding: 1rem
+
+.fa-check-circle 
+	display: inline-block
+	font-size: 5rem
 	color: #3c3
 	padding: 1rem
 
@@ -290,54 +296,67 @@ a.btn-consult:active
 	flex-direction: column
 	align-items: center
 	flex-wrap: wrap
+	padding-bottom: 2em
 
 .contacts__wrapper
 	width: 60%
 	display: flex
-	justify-content: space-around
+	justify-content: space-between
 	flex-wrap: wrap
 	//align-items: center
 	//background: white 
-	//border: 1px solid red
+	//border: 1px solid yellow
 	color: white
-	padding: 0 0 3em 0
+	padding-bottom: 2em
 
 .contacts__item
-	flex-basis: 50%
+	flex-basis: 40%
 	display: flex
-	justify-content: center
+	justify-content: flex-start
 	align-items: center
 	//border: 1px solid red
 	font: 1.5rem $MainFont
 	text-align: center
 	color: white
 
-.contact-link
-	text-decoration: none
-	color: white
-
 .contact-pic
-	font-size: 1.8rem
-	padding: 0.5rem
+	//font-size: 1.8rem
+	//padding: .5rem
 	border-radius: .5rem
 
-.contact-pic.fa-whatsapp-square
-	color: #25d366
-	font-size: 3rem
+.contact-pic.fa-whatsapp
+	font-size: 2.1rem
+	padding: .3rem .5rem
+	background: #25D366
 
 .contact-pic.fa-envelope
-
-	//display: inline-block
+	font-size: 1.8rem
+	padding: .5rem
 	background: linear-gradient(0deg, rgba(0, 102, 255, 1) 0%, rgba(51, 204, 255, 1) 100%) 
 
 .contact-pic.fa-vk
-
-	//display: inline-block
-	background: #507299
+	font-size: 1.8rem
+	padding: .5rem .4rem
+	background: #4680C2
 
 .contact-pic.fa-instagram
-
-	//display: inline-block
+	font-size: 2rem
+	padding: .3rem .5rem
 	background: linear-gradient(203deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)	
 
+.contact-link
+	display: block
+	text-decoration: none
+	color: white
+	padding: 1em 1em
+	//border: 1px solid red
 
+footer 
+	font: .8rem $MainFont
+	padding-bottom: 2em
+
+footer hr
+    border: none
+    background-color: rgba(255, 255, 255, 0.5)
+    height: 2px
+ 
