@@ -6,13 +6,16 @@
 	
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-3.4.1.min.js">
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Roboto+Condensed&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
 	
 <script type="text/javascript">
+	//Плавный переход по ссылке
  $(document).ready(function(){
     $("nav").on("click","a", function (event) {
         event.preventDefault();
@@ -21,7 +24,42 @@
         $('body,html').animate({scrollTop: top}, 1500);
     });
 });
+
+ //Визуализация Pop-up
+ $(document).ready(function(){
+
+	let 
+	Popup = document.getElementById('popup-feedback'),
+	PopupToggle = document.getElementById('btn-consult'),
+	CloseBtn = document.getElementById('btn-popup-close');
+
+	PopupToggle.onclick = function () {
+		Popup.style.display = 'flex';
+	};
+	CloseBtn.onclick =  function () {
+		Popup.style.display = 'none';
+	};
+	window.onclick =  function (event) {
+		if (event.target == Popup) {
+		Popup.style.display = 'none';
+		};
+	};
+});
 </script>
+
+<!--  POPUP -->
+<div  id="popup-feedback">
+	<!--  <div class="popup-feedback__content">-->
+		<form class="feedback-form">
+			<button type="button" class="btn-popup-close" id="btn-popup-close"><i class="far fa-times-circle"></i></button>		
+    		<input type="text" name="name" class="popup-feedback__name">Ваше имя</input>
+    		<input type="text" name="e-mail" class="popup-feedback__mail" value="sdkfjghs">E-mail</input>
+    		<button class="btn-popup-submit" >Отправить</button>
+    	</form>
+    
+</div>
+
+<!-- -------------------------- -->
 
 	<div class="wrapper">
 <!-- Титульная часть с меню и картинкой -->			
@@ -46,7 +84,7 @@
 					<span class="header-md">Гудилина Елена Викторовна</span>
 					<span class="header-sm">г. Орел</span>
 				</div>
-				<a class="btn-consult">МНЕ НУЖНА КОНСУЛЬТАЦИЯ!</a>
+				<button class="btn-consult" id="btn-consult">МНЕ НУЖНА КОНСУЛЬТАЦИЯ!</button>
 			</div>
 		</header>
 
