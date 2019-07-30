@@ -7,7 +7,7 @@
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 	<link rel="stylesheet" href="https://code.jquery.com/jquery-3.4.1.min.js">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Roboto+Condensed&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -30,12 +30,15 @@
 
 	let 
 	Popup = document.getElementById('popup-feedback'),
-	PopupToggle = document.getElementById('btn-consult'),
+	PopupsToggle = document.querySelectorAll('.btn-consult'),
 	CloseBtn = document.getElementById('btn-popup-close');
 
-	PopupToggle.onclick = function () {
-		Popup.style.display = 'flex';
-	};
+	PopupsToggle.forEach(function(item){
+		item.onclick = function () {Popup.style.display = 'flex';}}
+	)
+//	PopupsToggle.onclick = function () {
+//		Popup.style.display = 'flex';
+	//};
 	CloseBtn.onclick =  function () {
 		Popup.style.display = 'none';
 	};
@@ -49,13 +52,22 @@
 
 <!--  POPUP -->
 <div  id="popup-feedback">
-	<!--  <div class="popup-feedback__content">-->
+	  <!-- <div class="popup-feedback__content"> -->
+			
 		<form class="feedback-form">
-			<button type="button" class="btn-popup-close" id="btn-popup-close"><i class="far fa-times-circle"></i></button>		
-    		<input type="text" name="name" class="popup-feedback__name">Ваше имя</input>
-    		<input type="text" name="e-mail" class="popup-feedback__mail" value="sdkfjghs">E-mail</input>
+			<button type="button" class="btn-popup-close" id="btn-popup-close"><i class="far fa-times-circle"></i></button>	
+			<span>Оставьте, пожалуйста, свою контакную информацию и кратко опишите проблему и я обязательно свяжусь с Вами.</span>
+			<label for="" class="feedback-form__label">Вас зовут</label>
+    		<input type="text" name="name" class="popup-feedback__name" ></input>
+    		<label for="" class="feedback-form__label">Телефон</label>
+    		<input type="text" name="phone" class="popup-feedback__phone" value="+7(345)234-23-34"></input>
+    		<label for="" class="feedback-form__label">Адрес электронной почты</label>
+    		<input type="text" name="e-mail" class="popup-feedback__mail" value="john@mail.ru"></input>
+    		<label for="" class="feedback-form__label">Описание проблемы</label>
+    		<textarea name="message" class="popup-feedback__summary" id="" cols="30" rows="10" value="Опишите проблему"></textarea>
     		<button class="btn-popup-submit" >Отправить</button>
     	</form>
+   
     
 </div>
 
@@ -84,7 +96,7 @@
 					<span class="header-md">Гудилина Елена Викторовна</span>
 					<span class="header-sm">г. Орел</span>
 				</div>
-				<button class="btn-consult" id="btn-consult">МНЕ НУЖНА КОНСУЛЬТАЦИЯ!</button>
+				<button class="btn-consult">МНЕ НУЖНА КОНСУЛЬТАЦИЯ!</button>
 			</div>
 		</header>
 
