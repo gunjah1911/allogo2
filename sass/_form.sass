@@ -3,7 +3,7 @@
 	width: 100%
 	height: 100%
 	display: none
-	//display: flex
+	//display: flex //changing by script
 	justify-content: center
 	align-items: center
 	background-color: rgba(0,0,0,.8)
@@ -16,7 +16,7 @@
 	align-items: center
 
 .feedback-form
-	width: 300px
+	width: 400px
 	//height: 500px
 	min-width: 300px
 	//min-height: 500px
@@ -25,9 +25,21 @@
 	justify-content: flex-start
 	align-items: center
 	border-radius: 0.5em
-	padding: 1em
+	padding: 2em 1em
 	background-color: white
 	color: black
+	& span
+		padding: 1em 0
+	& input
+		width: 95%
+		padding: 0.8em
+		font-size: 1em
+		//border-radius: 2px
+	& textarea
+		width: 95%
+		//padding: 0.8em
+		margin: 0 0 1em 0	
+		font-size: 1em
 
 .btn-popup-close
 	align-self: flex-end
@@ -40,26 +52,15 @@
 		color: black
 	
 .btn-popup-submit
-	border: 0 none
 	align-self: center
 	background: none
 	cursor: pointer
- 	font-size: 4rem
-	padding: .3rem .5rem
+ 	font-size: 5rem
+	padding: .5rem .6rem
 	border: 2px solid black
-	border-radius: 3px
-
-.feedback-form input
-	width: 95%
-	padding: 0.8em
-	font-size: 1em
-	//border-radius: 2px
-
-.feedback-form textarea
-	width: 95%
-	//padding: 0.8em
-	margin: 0 0 1em 0	
-	font-size: 1em
+	border-radius: 4px
+	& span
+		font-size: 1rem
 
 .feedback-form__label
 	align-self: flex-start
