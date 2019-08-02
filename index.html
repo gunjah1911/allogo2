@@ -6,28 +6,49 @@
 	
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
-	<link rel="stylesheet" href="https://code.jquery.com/jquery-3.4.1.min.js">
+	<!--href="https://code.jquery.com/jquery-3.4.1.min.js" -->
 	<link rel="stylesheet" href="css/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum|Roboto+Condensed&display=swap" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.inputmask.min.js"></script>
 
 </head>
 <body>
 	
 <script type="text/javascript">
-	//Плавный переход по ссылке
+
  $(document).ready(function(){
+
+ //Маски полей ввода
+	$("#phone").inputmask("+7 (999) 999-99-99");
+
+	//"*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+	//"*{1,20}@*{1,20}.*{2,6}",
+	$("#e-mail").inputmask({
+    	mask: "*{1,20}@*{1,20}.*{2,6}",
+    	greedy: false,
+	    onBeforePaste: function (pastedValue, opts) {
+	      pastedValue = pastedValue.toLowerCase();
+	      return pastedValue.replace("mailto:", "");
+	    },
+	    definitions: {
+	      '*': {
+	        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+	        casing: "lower"
+	      }
+	    }
+  	});
+
+//Плавный переход по ссылке
     $("nav").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
     });
-});
 
  //Визуализация Pop-up
- $(document).ready(function(){
-
 	let 
 	Popup = document.getElementById('popup-feedback'),
 	PopupsToggle = document.querySelectorAll('.btn-consult'),
@@ -36,9 +57,7 @@
 	PopupsToggle.forEach(function(item){
 		item.onclick = function () {Popup.style.display = 'flex';}}
 	)
-//	PopupsToggle.onclick = function () {
-//		Popup.style.display = 'flex';
-	//};
+
 	CloseBtn.onclick =  function () {
 		Popup.style.display = 'none';
 	};
@@ -47,7 +66,9 @@
 		Popup.style.display = 'none';
 		};
 	};
-});
+
+
+});//document.ready
 </script>
 
 <!--  POPUP -->
@@ -58,17 +79,16 @@
 			<button type="button" class="btn-popup-close" id="btn-popup-close"><i class="far fa-times-circle"></i></button>	
 			<span>Оставьте, пожалуйста, свою контакную информацию и кратко опишите проблему и я обязательно свяжусь с Вами.</span>
 			<label for="name" class="feedback-form__label">Вас зовут</label>
-    		<input type="text" name="name" class="popup-feedback__name" id="name"></input>
+    		<input type="text" name="name" class="popup-feedback__name" id="name" placeholder="Вася"></input>
     		<label for="phone" class="feedback-form__label">Телефон</label>
-    		<input type="text" name="phone" class="popup-feedback__phone" value="+7(345)234-23-34" id="phone"></input>
+    		<input type="tel" name="phone" class="popup-feedback__phone" id="phone" placeholder="+7 (999) 999-99-99"></input>
     		<label for="e-mail" class="feedback-form__label">Адрес электронной почты</label>
-    		<input type="text" name="e-mail" class="popup-feedback__mail" value="john@mail.ru" id="e-mail"></input>
+    		<input type="text" name="e-mail" class="popup-feedback__mail" id="e-mail" placeholder="john@mail.ru"></input>
     		<label for="message" class="feedback-form__label">Описание проблемы</label>
-    		<textarea name="message" class="popup-feedback__summary" id="message" cols="30" rows="10" value="Опишите проблему"></textarea>
+    		<textarea name="message" class="popup-feedback__summary" id="message" cols="30" rows="10" ></textarea>
     		<button type="submit" name="submit" class="btn-popup-submit"><span>Отправить</span></button>
     	</form>
    
-    
 </div>
 
 <!-- -------------------------- -->
@@ -115,7 +135,7 @@
 				</div>
 			</div>
 		</section>
-	</div> <!-- Wrapper 60% -->
+	</div> <!-- Wrapper  -->
 
 			<!-- ABOUT -->
 	<section id="about">
