@@ -60,6 +60,17 @@ body {
 .menu-dummy {
   height: 6vh; }
 
+.menu-gradient {
+  height: 6vh;
+  width: 100%;
+  left: 0;
+  background: #ad9a7a;
+  position: fixed;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(15%, #ad9a7a), color-stop(85%, #ad9a7a), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #ad9a7a 15%, #ad9a7a 85%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #ad9a7a 15%, #ad9a7a 85%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #ad9a7a 15%, #ad9a7a 85%, rgba(0, 0, 0, 0) 100%); }
+
 nav {
   width: 40%; }
 
@@ -120,6 +131,7 @@ nav ul {
   color: #25D366; }
 
 .title-stripe {
+  self-align: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
