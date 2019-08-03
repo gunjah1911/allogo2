@@ -3,6 +3,7 @@ $HeaderFont: 'Cuprum'
 $MainFont: 'Roboto Condensed'
 $MainTextColor: #fff
 $MainBgdColor: #ad9a7a
+$BaseWidth: 1200px
 
 *, *:before, *:after
 	box-sizing: border-box
@@ -13,7 +14,7 @@ body
 	color: $MainTextColor
 
 .wrapper
-	max-width: 1200px 
+	max-width: $BaseWidth 
 	//padding: 0 10%
 	margin: 0 auto
 
@@ -48,13 +49,14 @@ body
 	justify-content: space-between
 	align-items: center
 	background-color: $MainBgdColor
+	//background: linear-gradient(90deg, rgba(0,36,23,0) 0%, rgba(173,154,122,1) 20%, rgba(173,154,122,1) 80%, rgba(0,212,255,0) 100%)
 	height: 6vh
 	//opacity: 0
 	z-index: 2
 
 	//sticky
 	position: fixed
-	width: 1200px
+	width: $BaseWidth
 
 .menu-dummy
 	height: 6vh
@@ -147,16 +149,11 @@ nav ul
 	font: 1.5rem $HeaderFont
 
 .btn-consult
-	//display: inline-block
 	color: black
 	font: bold 1.2rem $MainFont
-	//text-decoration: none
-	//cursor: pointer
+	text-transform: uppercase
+	cursor: pointer
 	padding: 1.5em 2em
-	//outline: none
-	//border: 2px 0 solid none #FDBE33 #000 #D77206
-	//border-style: solid none
-	//border-color: #FDBE33 #000 #D77206
 	border: none
 	border-radius: 16px
 	background: linear-gradient(#f3d20f, #e3a716) #E38916

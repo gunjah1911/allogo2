@@ -159,6 +159,8 @@ nav ul {
 .btn-consult {
   color: black;
   font: bold 1.2rem "Roboto Condensed";
+  text-transform: uppercase;
+  cursor: pointer;
   padding: 1.5em 2em;
   border: none;
   border-radius: 16px;
