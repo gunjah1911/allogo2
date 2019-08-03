@@ -22,6 +22,7 @@ body
 	display: flex
 	flex-direction: column
 	justify-content: space-between
+	align-items: center
 	background: url(../img/title-pic.jpg) no-repeat center
 	position: relative
 	min-height: 633px
@@ -45,6 +46,7 @@ body
 		opacity: 0
 
 .menu
+	self-align: flex-start
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -57,21 +59,30 @@ body
 	position: fixed
 	max-width: $BaseWidth
 	width: 100%
-	//border: 1px solid red
+	//width: $BaseWidth
+	//overflow: hidden
+	&:before, &:after 
+  		content: ''
+  		display: inline-block
+  		vertical-align: middle
+  		width: 100%
+  		height: 6vh
+  		
+  		//position: relative
+	&:before 
+		margin-left: -100%
+		//left: -20px
+		background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(173,154,122,1) 100%)
+	&:after 
+		margin-right: -100%
+		//right: -30px	
+		background: linear-gradient(90deg, rgba(173,154,122,1) 0%, rgba(0,0,0,0) 100%)	
 
 .menu-dummy
 	height: 6vh
 
-.menu-gradient
-	height: 6vh
-	width: 100%
-	left: 0
-	background: $MainBgdColor
-	position: fixed
-	background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(173,154,122,1) 15%, rgba(173,154,122,1) 85%, rgba(0,0,0,0) 100%)
-
 .menu__logo
-	//background-image: url(img/logo.png) no-repeat center
+	background-image: url(img/logo.png) no-repeat center
 	//border: 1px solid red
 	//width: 20%
 
