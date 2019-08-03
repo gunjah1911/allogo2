@@ -55,7 +55,8 @@ body {
   height: 6vh;
   z-index: 2;
   position: fixed;
-  width: 1200px; }
+  max-width: 1200px;
+  width: 100%; }
 
 .menu-dummy {
   height: 6vh; }
