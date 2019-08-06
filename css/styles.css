@@ -283,7 +283,6 @@ nav ul {
 
 .wrapper-right {
   width: 65%;
-  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +374,7 @@ nav ul {
   padding-bottom: 2em; }
 
 .contacts__wrapper {
-  width: 60%;
+  max-width: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
