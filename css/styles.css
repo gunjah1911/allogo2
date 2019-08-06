@@ -323,7 +323,7 @@ nav ul {
   color: black; }
 
 .needhelp__wrapper {
-  width: 60%;
+  max-width: 960px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
